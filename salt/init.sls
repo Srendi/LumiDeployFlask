@@ -20,14 +20,16 @@ salt-minion:
 
 /etc/salt/master.d/master.conf:
   file.managed:
-    - source: salt://salt/files/etc/salt/master.d/master.conf
+    - source: /srv/salt/LumiDeployFlask/salt/files/etc/salt/master.d/master.conf
+    - replace: True
     - user: root
     - group: root
     - mode: 640
 
 /etc/salt/minion.d/minion.conf:
   file.managed:
-    - source: salt://salt/files/etc/salt/minion.d/minion.conf
+    - source: /srv/salt/LumiDeployFlask/salt/files/etc/salt/minion.d/minion.conf
+    - replace: True
     - user: root
     - group: root
     - mode: 640

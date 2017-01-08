@@ -10,7 +10,8 @@ nginx:
 
 /etc/nginx/conf.d/nginx.conf:
   file.managed:
-    - source: salt://nginx/files/etc/nginx/conf.d/nginx.conf
+    - source: /srv/salt/LumiDeployFlask/nginx/files/etc/nginx/conf.d/nginx.conf
+    - replace: True
     - user: root
     - group: root
     - mode: 640
