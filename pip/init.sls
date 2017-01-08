@@ -1,9 +1,11 @@
 python-pip:
   pkg:
     - installed
+      - exists_action: i
 
 virtualenvwrapper:
   pip.installed:
+    - exists_action: i
     - require:
       - pkg: python-pip
 
