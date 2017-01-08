@@ -18,14 +18,14 @@ salt-minion:
       - pkg: salt-minion
       - file: /etc/salt/minion.d/minion.conf
 
-/etc/salt/master:
+/etc/salt/master.d/master.conf:
  file.managed:
     - source: salt://salt/files/etc/salt/master.d/master.conf
     - user: root
     - group: root
     - mode: 640
 
-/etc/salt/minion:
+/etc/salt/minion.d/minion.conf:
  file.managed:
     - source: salt://salt/files/etc/salt/minion.d/minion.conf
     - user: root
