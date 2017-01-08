@@ -6,7 +6,7 @@ salt-master:
     - reload: True
     - watch:
       - pkg: salt-master
-      - file: /etc/salt/master
+      - file: /etc/salt/master.d/master.conf
 	  
 salt-minion:
   pkg:
@@ -16,18 +16,18 @@ salt-minion:
     - reload: True
     - watch:
       - pkg: salt-minion
-      - file: /etc/salt/minion
+      - file: /etc/salt/minion.d/minion.conf
 	  
 /etc/salt/master:
  file.managed:
-    - source: salt://salt/files/etc/salt/master
+    - source: salt://salt/files/etc/salt/master.d/master.conf
     - user: root
     - group: root
     - mode: 640
 	
 /etc/salt/minion:
  file.managed:
-    - source: salt://salt/files/etc/salt/minion
+    - source: salt://salt/files/etc/salt/minion.d/minion.conf
     - user: root
     - group: root
     - mode: 640
