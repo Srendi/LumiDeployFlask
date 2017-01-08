@@ -1,0 +1,4 @@
+base:
+	- salt
+	- nginx
+	- pip	
