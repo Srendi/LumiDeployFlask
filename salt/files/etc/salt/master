@@ -1,6 +1,6 @@
 file_roots:
   base:
-    - /srv/salt
+    - /srv/salt/LumiDeployFlask
     - /srv/formulas
   dev:
     - /srv/salt/dev
