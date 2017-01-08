@@ -9,7 +9,7 @@ virtualenvwrapper:
 
 flask:
   pip.installed:
-    - name: flask = 0.11
+    - name: flask == 0.11
     - require:
       - pkg: python-pip
 
