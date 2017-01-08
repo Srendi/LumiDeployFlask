@@ -1,4 +1,5 @@
 base:
+  '*':
 	- salt
 	- nginx
 	- pip	
