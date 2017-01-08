@@ -2,4 +2,4 @@ base:
   '*':
 	- salt
 	- nginx
-	- pip	
+	- pip
