@@ -6,12 +6,12 @@ nginx:
     - reload: True
     - watch:
       - pkg: nginx
-      - file: /etc/nginx/nginx.conf
+      - file: /etc/nginx/conf.d/nginx.conf
       - file: /etc/nginx/sites-available/default
 
-/etc/nginx/nginx.conf:
+/etc/nginx/conf.d/nginx.conf:
  file.managed:
-    - source: salt://nginx/files/etc/nginx/nginx.conf
+    - source: salt://nginx/files/etc/nginx/conf.d/nginx.conf
     - user: root
     - group: root
     - mode: 640
