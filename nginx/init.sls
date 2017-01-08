@@ -10,7 +10,7 @@ nginx:
       - file: /etc/nginx/sites-available/default
 
 /etc/nginx/conf.d/nginx.conf:
- file.managed:
+  file.managed:
     - source: salt://nginx/files/etc/nginx/conf.d/nginx.conf
     - user: root
     - group: root
