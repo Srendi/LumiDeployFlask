@@ -10,11 +10,15 @@ virtualenvwrapper:
 flask:
   pip.installed:
     - name: flask == 0.11
+    - reload_modules: True
+    - exists_action: i
     - require:
       - pkg: python-pip
 
 gunicorn:
   pip.installed:
     - name: gunicorn
+    - reload_modules: True
+    - exists_action: i
     - require:
       - pkg: python-pip
