@@ -37,7 +37,7 @@ nginx:
     - group: root
     - mode: 640
 
-/etc/nginx/sites-enabled/:
+/etc/nginx/sites-enabled/hello:
   file.symlink:
     - target: /etc/nginx/sites-available/hello.conf
     - require:

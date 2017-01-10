@@ -35,6 +35,11 @@ git:
     - installed
     - allow_updates: True
 
+links:
+  pkg:
+    - installed
+    - allow_updates: True
+
 python-virtualenv:
   pkg:
     - installed
