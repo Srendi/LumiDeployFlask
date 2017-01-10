@@ -79,7 +79,7 @@ ufw allow salt:
 lumiDeployFlask:
   git.latest:
     - name: https://github.com/Srendi/LumiDeployFlask.git
-    - target: /srv/salt
+    - target: /srv/salt/LumiDeployFlask/
 
 salt-ssh:
   pkg:
