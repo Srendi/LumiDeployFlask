@@ -4,4 +4,4 @@ base:
     - pip
     - nginx
     - packages
-    - directories
+    - blog

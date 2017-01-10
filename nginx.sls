@@ -7,7 +7,7 @@ nginx:
     - watch:
       - pkg: nginx
       - file: /etc/nginx/conf.d/nginx.conf
-	  - file: /etc/nginx/sites-available/hello.conf
+      - file: /etc/nginx/sites-available/hello.conf
 
 /var/www:
    file.directory:

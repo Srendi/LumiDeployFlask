@@ -1,8 +1,3 @@
-python-pip:
-  pkg:
-    - installed
-    - allow_updates: True
-
 python-software-properties:
   pkg:
     - installed
@@ -13,11 +8,12 @@ software-properties-common:
     - installed
     - allow_updates: True
 
-pkgrepo.managed:
-  - ppa: fkrull/deadsnakes-python2.7
-pkg.latest:
-  - name: deadsnakes-python2.7
-  - refresh: True
+add-repo-snake:
+  pkgrepo.managed:
+    - ppa: fkrull/deadsnakes-python2.7
+  pkg.latest:
+    - name: deadsnakes-python2.7
+    - refresh: True
 
 python2.7:
   pkg:
