@@ -72,10 +72,8 @@ salt-minion:
     - watch:
       - pkg: salt-minion
       - file: /etc/salt/minion.d/minion.conf
-
-openfirewall:
-  cmd.run:
-    - "ufw allow salt"
+ufw allow salt:
+  cmd.run
 
 lumiDeployFlask:
   git.latest:

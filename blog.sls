@@ -3,10 +3,8 @@ hello_app:
     - name: https://github.com/Srendi/LumiFlaskBlog.git
     - target: /var/www
 
-run_app:
-  cmd.run:
-    - "cd /var/www/LumiFlaskBlog/ && sudo gunicorn -w 4 -b 127.0.0.1:8000 hello:app &"
+cd /var/www/LumiFlaskBlog/ && sudo gunicorn -w 4 -b 127.0.0.1:8000 hello:app &:
+  cmd.run
 
-reload_nginx:
-  cmd.run:
-    - sudo service nginx reload
+sudo service nginx reload:
+  cmd.run
