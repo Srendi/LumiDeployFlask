@@ -75,7 +75,7 @@ salt-minion:
 
 openfirewall:
   cmd.run:
-    - ufw allow salt
+    - "ufw allow salt"
 
 lumiDeployFlask:
   git.latest:
