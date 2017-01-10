@@ -71,7 +71,8 @@ salt-minion:
     - reload: True
     - watch:
       - pkg: salt-minion
-      - file: /etc/salt/minion.d/minion.conf
+
+
 ufw allow salt:
   cmd.run
 
