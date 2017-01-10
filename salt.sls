@@ -55,11 +55,12 @@
      - mode: 755
      - makedirs: True
 
-pkgrepo.managed:
-  - ppa: saltstack/salt
-pkg.latest:
-  - name: salt
-  - refresh: True
+add-repo-salt:
+  pkgrepo.managed:
+    - ppa: saltstack/salt
+  pkg.latest:
+    - name: salt
+    - refresh: True
 
 salt-minion:
   pkg:
