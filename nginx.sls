@@ -7,6 +7,19 @@ nginx:
     - watch:
       - pkg: nginx
       - file: /etc/nginx/conf.d/nginx.conf
+	  - file: /etc/nginx/sites-available/hello.conf
+
+/var/www:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+
+/etc/nginx/conf.d/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
 
 /etc/nginx/conf.d/nginx.conf:
   file.copy:
@@ -16,8 +29,16 @@ nginx:
     - group: root
     - mode: 640
 
-/etc/nginx/sites-enabled/default:
+/etc/nginx/sites-available/hello.conf:
+  file.copy:
+    - source: /srv/salt/LumiDeployFlask/nginx/files/etc/nginx/sites-available/hello.conf
+    - force: True
+    - user: root
+    - group: root
+    - mode: 640
+
+/etc/nginx/sites-enabled/:
   file.symlink:
-    - target: /etc/nginx/sites-available/default
+    - target: /etc/nginx/sites-available/hello.conf
     - require:
-      - file: /etc/nginx/sites-available/default
+      - file: /etc/nginx/sites-available/hello.conf
