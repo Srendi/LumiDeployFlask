@@ -1,18 +1,59 @@
-directories:
+/srv/salt/:
    file.directory:
      - user: root
      - group: root
      - mode: 755
      - makedirs: True
-    - names:
-      - /srv/salt
-      - /srv/pillar
-      - /srv/formulas
-      - /srv/salt/prod
-      - /srv/salt/dev
-      - /srv/salt/qa
-      - /etc/salt/master.d/
-      - /etc/salt/minion.d/
+
+/srv/pillar/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
+
+
+/srv/formulas/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
+
+/srv/salt/prod/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
+
+/srv/salt/dev/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
+
+/srv/salt/qa/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
+
+/etc/salt/master.d/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
+
+/etc/salt/minion.d/:
+   file.directory:
+     - user: root
+     - group: root
+     - mode: 755
+     - makedirs: True
 
 pkgrepo.managed:
   - ppa: saltstack/salt

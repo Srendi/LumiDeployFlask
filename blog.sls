@@ -6,4 +6,4 @@ hello_app:
 run_app:
   cmd.run:
     - cd /var/www/LumiFlaskBlog/ && sudo gunicorn -w 4 -b 127.0.0.1:8000 $usedApp &
-	- sudo service nginx reload
+    - sudo service nginx reload
